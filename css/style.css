@@ -1,0 +1,117 @@
+/* Desktop - Resposividade */
+
+@font-face {
+    font-family: fonteH1;
+    src: url("/fonts/kings.otf");
+}
+
+@font-face {
+    font-family: fonteH2;
+    src: url("/fonts/formal-demo.otf");
+}
+
+@font-face {
+    font-family: fonteH3;
+    src: url("/fonts/recoleta.otf");
+}
+
+:root {
+    --black: #010309ff;
+    --oxford-blue: rgb(19, 28, 66);
+    --night: rgb(34, 37, 41);
+    --silver: #C4C3C0ff;
+    --timberwolf: rgba(230, 230, 230, 0.815);
+    --desert-sand: #E3C09Eff;
+}
+
+body {
+    background: radial-gradient(var(--oxford-blue), var(--black));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--night);
+}
+
+.central {
+    width: 30%;
+    background: var(--timberwolf);
+    border-radius: 20px;
+    padding: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 15px var(--oxford-blue);
+}
+
+hr {
+    width: 100%;
+    height: 5px;
+    background-color: var(--black);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "fonteH1";
+    font-weight: 100;
+    margin: 0;
+}
+
+h2 {
+    font-family: "fonteH2";
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0;
+    font-family: "fonteH3";
+    text-align: center;
+
+}
+
+.redes {
+    display: flex;
+    gap: 20px;
+}
+
+/* Tablet - Responsividade */
+
+@media (max-width: 1024px) and (min-width:720px) {
+    body {
+        background: var(--desert-sand);
+    }
+
+    .central {
+        width: 50%;
+    }
+}
+
+/* Mobile - Responsividade */   
+
+@media (max-width: 720px) {
+    body {
+        background: var(--silver);
+    }
+
+    .central {
+        width: 70%;
+    }
+}
+
+/* Extensão: Responsive
+    Site: https://base64.com.br/tools/responsivetest/
+*/
